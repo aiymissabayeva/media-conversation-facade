@@ -15,4 +15,18 @@ public class MetadataReader {
         System.out.println("Source format: " + format);
         return format;
     }
+
+    public int readBitrate(String fileName) {
+        String format = readFormat(fileName);
+
+        if (format.equals("avi")) {
+            return 5000;
+        }
+
+        if (format.equals("mp4")) {
+            return 3000;
+        }
+
+        throw new IllegalArgumentException("Unsupported source format: " + format);
+    }
 }

@@ -1,4 +1,3 @@
-
 public class MediaConversionFacade {
     private MetadataReader metadataReader;
     private CodecFactory codecFactory;
@@ -17,13 +16,19 @@ public class MediaConversionFacade {
 
         String sourceFormat = metadataReader.readFormat(fileName);
 
+        int originalBitrate = metadataReader.readBitrate(fileName);
+
         String targetCodec = codecFactory.selectCodec(targetFormat);
 
         String convertedData = bitrateReader.convertData(
-                fileName, sourceFormat, targetCodec
+                fileName, sourceFormat, targetCodec, originalBitrate
         );
 
-        String finalResult = audioMixer.processAudio(convertedData);
+        int originalVolume = 80;
+
+        String finalResult = audioMixer.processAudio(
+                convertedData, originalVolume
+        );
 
         System.out.println("Media conversion completed.");
         return finalResult;
