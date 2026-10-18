@@ -1,7 +1,7 @@
 public class BitrateReader {
     public String convertData(String fileName, String sourceFormat, String targetCodec){
         if (fileName == null || fileName.isBlank() || sourceFormat == null || sourceFormat.isBlank() || targetCodec == null || targetCodec.isBlank()){
-            throw new IllegalArgumentException("Ivalid conversion data");
+            throw new IllegalArgumentException("Invalid conversion data");
         }
         int originalBitrate = 5000;
         int convertBitrate;
