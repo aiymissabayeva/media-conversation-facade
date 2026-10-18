@@ -1,4 +1,4 @@
-public class MetaDataReader {
+public class MetadataReader {
     public String readFormat(String fileName){
         if (fileName == null || fileName.isBlank()){
             throw new IllegalArgumentException("File name can't be empty");

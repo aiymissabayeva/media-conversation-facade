@@ -1,12 +1,12 @@
 
 public class MediaConversionFacade {
-    private MetaDataReader metadataReader;
+    private MetadataReader metadataReader;
     private CodecFactory codecFactory;
     private BitrateReader bitrateReader;
     private AudioMixer audioMixer;
 
     public MediaConversionFacade() {
-        metadataReader = new MetaDataReader();
+        metadataReader = new MetadataReader();
         codecFactory = new CodecFactory();
         bitrateReader = new BitrateReader();
         audioMixer = new AudioMixer();
