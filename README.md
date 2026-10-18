@@ -22,12 +22,12 @@ The `MediaConversionFacade` coordinates four subsystem classes and hides the int
 
 The project contains six Java classes:
 
-• **Main** - The client. It starts the program and uses the Facade.
-• **MediaConversionFacade** - Coordinates all conversion steps.
-• **MetadataReader** - Reads the source file format and provides a simulated original bitrate.
-• **CodecFactory** - Selects a codec based on the target format.
-• **BitrateReader** - Calculates a new bitrate using the original bitrate and selected codec.
-• **AudioMixer** - Simulates audio processing by adjusting the volume.
+- **Main** - The client. It starts the program and uses the Facade.
+- **MediaConversionFacade** - Coordinates all conversion steps.
+- **MetadataReader** - Reads the source file format and provides a simulated original bitrate.
+- **CodecFactory** - Selects a codec based on the target format.
+- **BitrateReader** - Calculates a new bitrate using the original bitrate and selected codec.
+- **AudioMixer** - Simulates audio processing by adjusting the volume.
 
 ## How It Works
 
